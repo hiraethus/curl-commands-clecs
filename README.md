@@ -20,3 +20,34 @@ Anablu logio i mewn
         --data "username=$CLECS_USERNAME" \
         --data "password=$CLECS_PASSWORD" \
         --data "grant_type=password"
+
+
+## /api/Posting/PostAPost
+
+### POST
+
+Postio post ar eich wal
+
+#### Gorchymyn ```curl```
+    curl -X POST https://www.clecs.cymru/api/Posting/PostAPost \
+        -H "Content-Type: application/x-www-form-urlencoded" \
+	-H "Authorization: Bearer $CLECS_TOKEN" \
+        --data "PostText=Lorem ipsum dolor sit amet"
+
+## /api/Posting/DeletePost
+
+Dileu post oddi ar eich wal
+
+### POST
+
+    export RHIFYN_POST=123
+    
+    curl -X POST https://www.clecs.cymru/api/Posting/DeletePost \
+        -H "Content-Type: application/x-www-form-urlencoded" \
+	-H "Authorization: Bearer $CLECS_TOKEN" \
+        --data "id=$RHIFYN_POST"
+
+
+
+
+
