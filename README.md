@@ -31,7 +31,7 @@ Postio post ar eich wal
 #### Gorchymyn ```curl```
     curl -X POST https://www.clecs.cymru/api/Posting/PostAPost \
         -H "Content-Type: application/x-www-form-urlencoded" \
-	-H "Authorization: Bearer $CLECS_TOKEN" \
+        -H "Authorization: Bearer $CLECS_TOKEN" \
         --data "PostText=Lorem ipsum dolor sit amet"
 
 ## /api/Posting/DeletePost
@@ -44,10 +44,17 @@ Dileu post oddi ar eich wal
     
     curl -X POST https://www.clecs.cymru/api/Posting/DeletePost \
         -H "Content-Type: application/x-www-form-urlencoded" \
-	-H "Authorization: Bearer $CLECS_TOKEN" \
+        -H "Authorization: Bearer $CLECS_TOKEN" \
         --data "id=$RHIFYN_POST"
 
 
+## /api/Posting/PostASmile
 
+Postio gwen i bost wal rhywun
 
+### POST
+    curl -X POST https://www.clecs.cymru/api/Posting/PostASmile \
+        -H "Content-Type: application/x-www-form-urlencoded" \
+        -H "Authorization: Bearer $CLECS_TOKEN" \
+        --data "PostId=$RHIFYN_POST"
 
