@@ -71,6 +71,7 @@ Darganfod defnyddwyr
 ## api/Posting/SearchLoadMore
 
 Chwilio am postiadau
+
     export TESTUN_POST="Lorem+ipsum+dolor+sit+amet"
     curl -X GET "https://www.clecs.cymru/api/Posting/SearchLoadMore?toFind=$TESTUN_POST&idLast=0" \
         -H "Content-Type: application/x-www-form-urlencoded" \
