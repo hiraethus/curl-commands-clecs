@@ -58,3 +58,23 @@ Postio gwen i bost wal rhywun
         -H "Authorization: Bearer $CLECS_TOKEN" \
         --data "PostId=$RHIFYN_POST"
 
+## /api/Posting/FindUsers
+
+Darganfod defnyddwyr
+
+### GET
+    export END_DEFNYDDIWR=Clecs
+    curl -X GET "https://www.clecs.cymru/api/Posting/FindUsers?toFind=$END_DEFNYDDIWR" \
+        -H "Content-Type: application/x-www-form-urlencoded" \
+        -H "Authorization: Bearer $CLECS_TOKEN"
+
+## api/Posting/SearchLoadMore
+
+Chwilio am postiadau
+    export TESTUN_POST="Lorem+ipsum+dolor+sit+amet"
+    curl -X GET "https://www.clecs.cymru/api/Posting/SearchLoadMore?toFind=$TESTUN_POST&idLast=0" \
+        -H "Content-Type: application/x-www-form-urlencoded" \
+        -H "Authorization: Bearer $CLECS_TOKEN"
+
+
+
