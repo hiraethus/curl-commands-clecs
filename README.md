@@ -182,7 +182,7 @@ Er mwyn defnyddio'r gorchmynion isod, mae'n rhaid gosod y global variables yma:
 	      "avatar": "https://clecs.blob.core.windows.net/profileimages/**.png",
 	      "profileUrl": "/Home/ProfilePage/CymorthClecs",
 	      "followedBy": "60"
-	  },
+          },
 	  {
 	    "username": ...
 	  }
@@ -200,14 +200,61 @@ Er mwyn defnyddio'r gorchmynion isod, mae'n rhaid gosod y global variables yma:
     ```
 
 
-## api/Posting/SearchLoadMore
+## Chwilio am postiadau clecs
 
-Chwilio am postiadau
+* **URL**
 
+    /api/Posting/SearchLoadMore
+
+* **Method**
+
+    `GET`
+
+* **URL Params**
+
+    `toFind=[string]`
+
+* **Data Params**
+
+    None
+
+* **Success Response:**
+
+    * **Code:** 200 <br />
+      **Content:**
+      ```json
+      [
+          {
+	      "postId": 1483,
+	      "transactionAgainstPostId": 1483,
+	      "myPost": true,
+	      "postText": "Lorem ipsum dolor sit amet",
+	      "postTextOriginal": "Lorem ipsum dolor sit amet",
+	      "dateCreated": "7d",
+	      "createdByUsername": "cymrobalch",
+	      "createdByName": "Meical Jones",
+              "createdByAvatar": "https://clecs.blob.core.windows.net/profileimages/***.png",
+	      "profileUrl":"/cymrobalch",
+	      "commentsQty": "0",
+	      "smileQty": "5",
+	      "sadQty": "0",
+	      "smileSadNothing": 0,
+	      "containsImage": false,
+	      "imageUrl": null,
+	      "quote": false,
+	      "quotedPostId": null,
+	      "share": false,
+	      "sharereUsername": null
+	  }
+      ]
+      ```
+
+* **Esiampl `curl**
+
+    ```bash
     export TESTUN_POST="Lorem+ipsum+dolor+sit+amet"
+    
     curl -X GET "https://www.clecs.cymru/api/Posting/SearchLoadMore?toFind=$TESTUN_POST&idLast=0" \
         -H "Content-Type: application/x-www-form-urlencoded" \
         -H "Authorization: Bearer $CLECS_TOKEN"
-
-
-
+    ```
