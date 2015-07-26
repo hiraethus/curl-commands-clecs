@@ -119,15 +119,36 @@ Er mwyn defnyddio'r gorchmynion isod, mae'n rhaid gosod y global variables yma:
         --data "id=$RHIFYN_POST"
     ```
 
-## /api/Posting/PostASmile
+## Postio gwen ar glec rhywun
 
-Postio gwen i bost wal rhywun
+* **URL**
 
-### POST
+    /api/Posting/PostASmile
+
+* **Method**
+
+    `POST`
+
+* **URL Params**
+
+    None
+
+* **Data Params**
+
+    `PostId=[integer]`
+
+* **Success Response:**
+
+    * **Code:** 200
+
+* **Esiampl `curl`**
+
+    ```bash
     curl -X POST https://www.clecs.cymru/api/Posting/PostASmile \
         -H "Content-Type: application/x-www-form-urlencoded" \
         -H "Authorization: Bearer $CLECS_TOKEN" \
         --data "PostId=$RHIFYN_POST"
+    ```
 
 ## Darganfod defnyddwyr
 
