@@ -85,19 +85,39 @@ Er mwyn defnyddio'r gorchmynion isod, mae'n rhaid gosod y global variables yma:
         --data "PostText=Lorem ipsum dolor sit amet"
     ```
 
-## /api/Posting/DeletePost
+## Dileu clec
 
-Dileu post oddi ar eich wal
+* **URL**
 
-### POST
+    /api/Posting/DeletePost
 
+* **Method**
+
+    `POST`
+
+* **URL Params**
+
+    None
+
+* **Data Params**
+
+    `id=[integer]`
+
+* **Success Response:**
+
+    * **Code:** 200 <br />
+
+
+* **Esiampl `curl`**
+
+    ```bash
     export RHIFYN_POST=123
     
     curl -X POST https://www.clecs.cymru/api/Posting/DeletePost \
         -H "Content-Type: application/x-www-form-urlencoded" \
         -H "Authorization: Bearer $CLECS_TOKEN" \
         --data "id=$RHIFYN_POST"
-
+    ```
 
 ## /api/Posting/PostASmile
 
