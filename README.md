@@ -18,7 +18,7 @@ Er mwyn defnyddio'r gorchmynion isod, mae'n rhaid gosod y global variables yma:
 
     `POST`
 
-* **URL PARAMS**
+* **URL Params**
 
     None
 
@@ -44,7 +44,8 @@ Er mwyn defnyddio'r gorchmynion isod, mae'n rhaid gosod y global variables yma:
 	  }
 	  ```
 
-* Esiampl `curl`
+* **Esiampl `curl`**
+
     ```bash
     curl -X POST https://www.clecs.cymru/Token \
         -H "Content-Type: application/x-www-form-urlencoded" \
@@ -53,17 +54,36 @@ Er mwyn defnyddio'r gorchmynion isod, mae'n rhaid gosod y global variables yma:
         --data "grant_type=password"
     ```
 
-## /api/Posting/PostAPost
+## Postio clec i eich ffrwd
 
-### POST
+* **URL**
 
-Postio post ar eich wal
+    /api/Posting/PostAPost
 
-#### Gorchymyn ```curl```
+* **Method**
+
+    `POST`
+
+* **URL Params**
+
+    None
+
+* **Data Params**
+
+    `PostText=[string]` - cyfyngu i 200 llythyren
+
+* **Success Response:**
+
+    * **Code:** 200 <br />
+
+* **Esiampl `curl`**
+
+    ```bash
     curl -X POST https://www.clecs.cymru/api/Posting/PostAPost \
         -H "Content-Type: application/x-www-form-urlencoded" \
         -H "Authorization: Bearer $CLECS_TOKEN" \
         --data "PostText=Lorem ipsum dolor sit amet"
+    ```
 
 ## /api/Posting/DeletePost
 
