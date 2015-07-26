@@ -129,15 +129,55 @@ Postio gwen i bost wal rhywun
         -H "Authorization: Bearer $CLECS_TOKEN" \
         --data "PostId=$RHIFYN_POST"
 
-## /api/Posting/FindUsers
+## Darganfod defnyddwyr
 
-Darganfod defnyddwyr
+* **URL**
 
-### GET
+    /api/Posting/FindUsers
+
+
+* **Method**
+
+    `GET`
+
+* **URL Params**
+
+    `toFind=[string]`
+
+* **Data Params**
+
+    None
+
+* **Success Response**
+
+    * **Code:** 200 <br />
+      **Content:**
+
+      ```json
+      [
+          {
+	      "username": "CymorthClecs",
+	      "namey": "Cymorth Clecs",
+	      "avatar": "https://clecs.blob.core.windows.net/profileimages/**.png",
+	      "profileUrl": "/Home/ProfilePage/CymorthClecs",
+	      "followedBy": "60"
+	  },
+	  {
+	    "username": ...
+	  }
+      ]
+      ```
+
+    * **Esiampl `curl`**
+
+    ```bash
     export END_DEFNYDDIWR=Clecs
-    curl -X GET "https://www.clecs.cymru/api/Posting/FindUsers?toFind=$END_DEFNYDDIWR" \
+
+    curl -X GET "https://www.clecs.cymru/api/Posting/FindUsers?toFind=$ENW_DEFNYDDIWR" \
         -H "Content-Type: application/x-www-form-urlencoded" \
         -H "Authorization: Bearer $CLECS_TOKEN"
+    ```
+
 
 ## api/Posting/SearchLoadMore
 
