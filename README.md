@@ -45,12 +45,13 @@ Er mwyn defnyddio'r gorchmynion isod, mae'n rhaid gosod y global variables yma:
 	  ```
 
 * Esiampl `curl`
+    ```bash
     curl -X POST https://www.clecs.cymru/Token \
         -H "Content-Type: application/x-www-form-urlencoded" \
         --data "username=$CLECS_USERNAME" \
         --data "password=$CLECS_PASSWORD" \
         --data "grant_type=password"
-
+    ```
 
 ## /api/Posting/PostAPost
 
