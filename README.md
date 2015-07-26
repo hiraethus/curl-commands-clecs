@@ -1,4 +1,4 @@
-# Sut i ddefnyddio ```Curl``` i weithio gyda [Clecs.cymru](http://clecs.cymru)
+# Dogfen API [Clecs.cymru](http://clecs.cymru)
 
 ## Global variables
 
