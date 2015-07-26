@@ -8,13 +8,42 @@ Er mwyn defnyddio'r gorchmynion isod, mae'n rhaid gosod y global variables yma:
     export CLECS_PASSWORD=eich_CyfriNAIR
 
 
-## /Token
+## Logio i mewn
 
-### POST
+* **URL**
 
-Anablu logio i mewn
+    /Token
 
-#### Gorchymyn ```curl```
+* **Method**
+
+    `POST`
+
+* **URL PARAMS**
+
+    None
+
+* **Data Params**
+
+    `username=[string]`
+    `password=[string]`
+    `grant_type=password`
+
+* **Success Response:**
+
+    * **Code:** 200 <br />
+      **Content:**
+          ```json
+	  {
+	      "access_token": "EXlf...",
+	      "token_type": "bearer",
+	      "expires_in": "2591999",
+	      "userName": "enw_defnyddiwr",
+	      "userImage": "https://clecs.blob.core.windows.net.profileimages/***.png",
+	      ".issued": "Sun, 26 Jan 1999 08:05:12 GMT"
+	  }
+	  ```
+
+* Esiampl `curl`
     curl -X POST https://www.clecs.cymru/Token \
         -H "Content-Type: application/x-www-form-urlencoded" \
         --data "username=$CLECS_USERNAME" \
