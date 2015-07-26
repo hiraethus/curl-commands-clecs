@@ -183,9 +183,9 @@ Er mwyn defnyddio'r gorchmynion isod, mae'n rhaid gosod y global variables yma:
 	      "profileUrl": "/Home/ProfilePage/CymorthClecs",
 	      "followedBy": "60"
           },
-	  {
+          {
 	    "username": ...
-	  }
+          }
       ]
       ```
 
@@ -250,7 +250,7 @@ Er mwyn defnyddio'r gorchmynion isod, mae'n rhaid gosod y global variables yma:
       ]
       ```
 
-* **Esiampl `curl**
+* **Esiampl `curl`**
 
     ```bash
     export TESTUN_POST="Lorem+ipsum+dolor+sit+amet"
