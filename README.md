@@ -259,3 +259,23 @@ Er mwyn defnyddio'r gorchmynion isod, mae'n rhaid gosod y global variables yma:
         -H "Content-Type: application/x-www-form-urlencoded" \
         -H "Authorization: Bearer $CLECS_TOKEN"
     ```
+
+## Nol yr 20ain clec diweddaraf yn eich ffrwd
+* **URL**
+       /api/Posting/GetAllPosts
+
+* **Method**
+    `GET`
+
+* **URL Params**
+    `idLast=[int]`
+
+* **Data Params**
+
+    None
+
+* **Esiample `curl`**
+    ```bash
+        curl https://www.clecs.cymru/api/Posting/GetAllPosts?idLast=0 \
+	 -H "Authorization: Bearer $CLECS_TOKEN"
+    ```
